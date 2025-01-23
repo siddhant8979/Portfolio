@@ -411,6 +411,9 @@ h6 {
 # Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/
 @media screen and (max-width: 768px) {
+  .main .hero img {
+    object-fit: fill;
+  }
   [data-aos-delay] {
     transition-delay: 0 !important;
   }
