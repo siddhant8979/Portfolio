@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const formData = {
             from_name: document.querySelector('input[name="name"]').value,
             from_email: document.querySelector('input[name="email"]').value,
+            reply_to: document.querySelector('input[name="email"]').value,
             subject: document.querySelector('input[name="subject"]').value,
             message: document.querySelector('textarea[name="message"]').value
         };
