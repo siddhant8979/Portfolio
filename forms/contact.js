@@ -19,7 +19,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const formData = {
             from_name: document.querySelector('input[name="name"]').value,
             from_email: document.querySelector('input[name="email"]').value,
-            reply_to: document.querySelector('input[name="email"]').value,
             subject: document.querySelector('input[name="subject"]').value,
             message: document.querySelector('textarea[name="message"]').value
         };
@@ -35,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Send email using EmailJS
         emailjs.send("service_0t3lo5u", "template_rd9k70d", formData)
             .then(function (response) {
+                emailjs.send("service_0t3lo5u", "template_3gaeaim", formData);
                 thisForm.querySelector('.loading').style.display = "none";
                 thisForm.querySelector('.sent-message').style.display = "block";
                 thisForm.reset(); // Reset the form on success
